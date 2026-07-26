@@ -51,7 +51,7 @@ import {
   ShoppingBag,
   UserCog,
   UsersRound,
-  MonitorSmartphone,
+  MonitorSmartphone, User
 } from "lucide-react";
 
 const skillCategories = [
@@ -75,19 +75,7 @@ const skillCategories = [
       ["Bootstrap", SiBootstrap], ["Tailwind CSS", SiTailwindcss]
     ]
   },
-  {
-    name: "Databases",
-    icon: Database,
-    description: "Database design, querying, optimization, and data management.",
-    items: [["MySQL", SiMysql], ["Microsoft SQL Server", Database]]
-  },
-  {
-    name: "Reporting & ERP",
-    icon: FileText,
-    description: "Reporting and ERP platforms used for payroll and finance workflows.",
-    items: [["Crystal Reports", FileText], ["Sage 300", Building2], ["NetSuite", Server], ["QuickBooks", SiQuickbooks]]
-  },
-  {
+    {
     name: "Development Tools",
     icon: Wrench,
     description: "Tools used for planning, coding, testing, deployment, and support.",
@@ -99,6 +87,19 @@ const skillCategories = [
     ]
   },
   {
+    name: "Reporting & ERP",
+    icon: FileText,
+    description: "Reporting and ERP platforms used for payroll and finance workflows.",
+    items: [["Crystal Reports", FileText], ["Sage 300", Building2], ["NetSuite", Server], ["QuickBooks", SiQuickbooks]]
+  },
+
+  {
+    name: "Databases",
+    icon: Database,
+    description: "Database design, querying, optimization, and data management.",
+    items: [["MySQL", SiMysql], ["Microsoft SQL Server", Database]]
+  },
+  {
     name: "Hosting & Infrastructure",
     icon: Server,
     description: "Hosting, deployment, file transfer, and email security platforms.",
@@ -108,7 +109,7 @@ const skillCategories = [
     name: "Productivity & Design",
     icon: Palette,
     description: "Design and productivity software supporting polished project delivery.",
-    items: [["Microsoft Office Suite", FileText], ["Nitro PDF Pro", FileText], ["Adobe Photoshop", FaPaintBrush],  ["Canva", Palette]]
+    items: [["Microsoft Office Suite", FileText], ["Nitro PDF Pro", FileText], ["Adobe XD", FaPaintBrush ], ["Adobe Photoshop", FaPaintBrush],  ["Canva", Palette], ["yWorks" , Workflow]]
   }
  ] as const;
 
@@ -404,8 +405,8 @@ const filteredProjects =
       <header className="site-header">
         <div className="nav-shell">
           <a className="brand" href="#home" onClick={() => setMenuOpen(false)}>
-            <span className="brand-mark">DP</span>
-            <span><strong>DYANN P.</strong><small>SOFTWARE DEVELOPER</small></span>
+            <UserRound className="brand-mark" />
+            <span><strong>DYANN DUCALANG</strong><small>PROFESSIONAL PROFILE</small></span>
           </a>
           <nav className={menuOpen ? "nav-links open" : "nav-links"}>
             {[
@@ -413,7 +414,7 @@ const filteredProjects =
  
             ].map(([label, href]) => <a key={label} href={href} onClick={() => setMenuOpen(false)}>{label}</a>)}
           </nav>
-          <a className="download-btn" href="/resume.pdf" download><Download size={17} /> Download CV</a>
+          <a className="download-btn" href="/dhd_cv_2026.pdf" download><Download size={17} /> Download CV</a>
           <button className="menu-btn" aria-label="Toggle navigation" onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? <X /> : <Menu />}
           </button>
@@ -424,15 +425,10 @@ const filteredProjects =
         <div className="hero-grid">
           <Reveal className="hero-copy">
             <h1>Dyann D.<br /> <span> Profile</span></h1>
-            <p>Software Developer with expertise in PHP, Laravel, Vue.js, React.js, and MySQL. I develop scalable web applications, payroll systems, automated reports, and integrations with ERP platforms</p>
+            <p>Software Developer with expertise in PHP, Laravel, Vue.js, React.js, Wordpress and MySQL. I develop scalable web applications, payroll systems, automated reports, and integrations with ERP platforms.</p>
             <div className="hero-actions">
               <a href="#projects" className="primary-btn">View My Work <ArrowRight size={18} /></a>
               <a href="#contact" className="secondary-btn"><Mail size={18} /> Contact Me</a>
-            </div>
-            <div className="social-links">
-              <a href="https://github.com" aria-label="GitHub"><FaGithub style={{ color: "#F5F5F5" }} /></a>
-              <a href="https://linkedin.com" aria-label="LinkedIn"><FaLinkedin style={{ color: "#0A66C2" }} /></a>
-              <a href="mailto:youremail@example.com" aria-label="Email"><Mail style={{ color: "#7DD3FC" }} /></a>
             </div>
           </Reveal>
           <div className="hero-animation" aria-hidden="true">
@@ -472,7 +468,7 @@ const filteredProjects =
       <div className="code-line code-indent">
         <span className="code-cyan">name</span>
         <span>: </span>
-        <span className="code-green">"Dyann P."</span>
+        <span className="code-green">"Dyann Ducalang"</span>
         <span>,</span>
       </div>
 
@@ -499,7 +495,7 @@ const filteredProjects =
       </div>
 
       <div className="code-line code-double-indent">
-        <span className="code-green">"Payroll Systems"</span>
+        <span className="code-green">"Automation and System"</span>
       </div>
 
       <div className="code-line code-indent">
@@ -554,15 +550,16 @@ const filteredProjects =
             <div>
               <h2>About Me</h2>
               <span className="title-line" />
-              <p>I&apos;m a passionate Software Developer focused on creating efficient, user-friendly, and scalable web systems. I enjoy solving complex problems and turning ideas into practical digital solutions.</p>
-              <p>With experience in payroll systems, ERP integration, and reporting solutions, I deliver applications that help businesses streamline operations and improve productivity.</p>
-            </div>
+              <p>I'm a Software Developer dedicated to building efficient, user-friendly, and scalable web applications. </p>
+              <p> With experience in HR & payroll systems, ERP integrations, website development, and reporting solutions, I develop applications that help businesses streamline operations and improve productivity.</p>
+              <p> Away from my computer, I enjoy watching movies, reading books, and having meaningful conversations with friends.</p>
+             </div>
           </div>
           <div className="service-grid">
             {[
-              [Code2, "Frontend & Backend Development", "Building responsive and dynamic web applications."],
-              [Database, "Database Design", "Designing efficient and scalable database structures."],
-              [Workflow, "API Integration", "Connecting third-party and RESTful APIs seamlessly."],
+              [Code2, "Full-Stack Development", "Building responsive and dynamic web applications."],
+              [Database, "Database Design & API Integration", "Designing scalable database and RESTful APIs structures."],
+              [Workflow, "Reports & Automation", "Develop data reporting and automation solutions."],
               [Palette, "UI / UX Design", "Creating intuitive and user-friendly interfaces."]
             ].map(([Icon, title, text]) => (
               <article className="service-card" key={String(title)}>
@@ -610,9 +607,6 @@ const filteredProjects =
   <Reveal className="projects-showcase">
     <div className="projects-heading">
       <div>
-        <span className="projects-eyebrow">
-          Selected development work
-        </span>
 
         <h2>Featured Projects</h2>
 
@@ -688,23 +682,7 @@ const filteredProjects =
               </div>
             </div>
 
-            <div className="project-card-footer">
-              <Link
-                href={`/projects/${project.slug}`}
-                className="view-project-link"
-              >
-                View Project
-                <ArrowRight size={16} />
-              </Link>
 
-              <Link
-                href={`/projects/${project.slug}`}
-                className="project-icon-link"
-                aria-label={`View ${project.title}`}
-              >
-                <ExternalLink size={17} />
-              </Link>
-            </div>
           </article>
         );
       })}
@@ -875,9 +853,9 @@ const filteredProjects =
       <section className="panel-section" id="contact">
         <Reveal className="contact-panel">
           <div className="contact-title"><span><ArrowRight /></span><div><h2>Let&apos;s Work Together</h2><p>Have a project in mind? Let&apos;s build something great together.</p></div></div>
-          <div className="contact-item"><Mail /><span>youremail@example.com</span></div>
-          <div className="contact-item"><Phone /><span>+63 912 345 6789</span></div>
-          <div className="contact-item"><MapPin /><span>Philippines</span></div>
+          <div className="contact-item"><Mail /><span>yan.ducalang@gmail.com</span></div>
+          <div className="contact-item"><Phone /><span>+63 968 213 5135</span></div>
+          <div className="contact-item"><MapPin /><span>Manila, Philippines</span></div>
         </Reveal>
       </section>
 

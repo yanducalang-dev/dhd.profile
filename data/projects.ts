@@ -18,7 +18,7 @@ export const projects = [
     slug: "issue-tracking-system",
     title: "Issue Tracking System",
     subtitle: "Task and Progress Management",
-    category: "Internal System",
+    category: "Web Application",
     description:
       "A centralized system that streamlines issue reporting, task assignment, status monitoring, and progress tracking.",
     technologies: ["PHP", "CodeIgniter"],
@@ -54,7 +54,7 @@ export const projects = [
   slug: "quickbooks-trackpod-integration",
   title: "QuickBooks Order Items to Track-Pod Shipment Integration",
   subtitle: "ERP & Logistics Automation",
-  category: "System Integration",
+  category: "E-Commerce",
   description:
     "Developed an integration between QuickBooks and Track-Pod that automatically synchronizes customer orders, shipment details, and delivery information. The solution eliminates manual encoding, streamlines dispatch operations, and provides real-time shipment tracking for business-to-business deliveries.",
   technologies: [
@@ -102,7 +102,7 @@ export const projects = [
     slug: "hrms-notice-module",
     title: "HRMS Notice Module",
     subtitle: "Employee Workflow Management",
-    category: "HR System",
+    category: "Enterprise System",
     description:
       "An HR module for updating employee hire and termination dates, wages, and positions through a structured approval workflow.",
     technologies: ["Laravel", "Vue.js"],
@@ -112,9 +112,9 @@ export const projects = [
   },
   {
     slug: "eftc-reimbursement-payroll",
-    title: "EFTC Reimbursement Payroll Module",
+    title: "Reimbursement Payroll Module",
     subtitle: "Employee Reimbursement Processing",
-    category: "Payroll System",
+    category: "Enterprise System",
     description:
       "A payroll module that processes employee reimbursements, maps requests to payroll periods, and supports reimbursement tracking.",
     technologies: ["Laravel", "Vue.js", "MySQL"],
@@ -150,12 +150,27 @@ export const projects = [
     slug: "mdr-apartment",
     title: "MDR Apartment Website",
     subtitle: "Apartment Rental Website",
-    category: "Property Website",
+    category: "Website",
     description:
       "A property website that presents apartment amenities, available rooms, and rental information in a modern responsive interface.",
     technologies: ["Next.js"],
     icon: Building2,
     accent: "sky",
     liveUrl: "https://dmr-apartment.vercel.app/"
-  }
+  },
+  {
+    slug: "wqip-tracking",
+    title: "Tracks Clinical Performance & Staffing Metrics",
+    subtitle: "Workforce Quality Incentive Program Tracking",
+    category: "Reporting Automation",
+    description:
+      "Performance reporting dashboard that consolidates clinical quality metrics, calculates performance becnhmarks, and provides estimated incentive payouts through automated Excel formulas and reporting.",
+    technologies: [
+      "VB.NET",
+      "Excel"
+    ],
+    icon: ChartNoAxesCombined,
+    accent: "emerald",
+    liveUrl: null
+  },
 ] as const;

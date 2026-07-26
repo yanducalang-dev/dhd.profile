@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Dyann | Software Developer",
+  title: "Dyann | Professional Profile",
   description: "Modern software developer portfolio focused on web systems, payroll applications, APIs, and ERP integrations.",
 };
 

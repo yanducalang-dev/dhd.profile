@@ -410,11 +410,11 @@ const filteredProjects =
           </a>
           <nav className={menuOpen ? "nav-links open" : "nav-links"}>
             {[
-              ["Home", "#home"], ["About", "#about"], ["Skills", "#skills"], ["Projects", "#projects"], ["Training", "#training"],  ["Experience", "#experience"], ["Contact", "#contact"]
+              ["Home", "#home"], ["About", "#about"], ["Skills", "#skills"], ["Projects", "#projects"], ["Training", "#training"],  ["Contact", "#contact"]
  
             ].map(([label, href]) => <a key={label} href={href} onClick={() => setMenuOpen(false)}>{label}</a>)}
           </nav>
-          <a className="download-btn" href="/dhd_cv_2026.pdf" download><Download size={17} /> Download CV</a>
+          <a className="download-btn" href="/dhducalang_resume.pdf" download><Download size={17} /> Download CV</a>
           <button className="menu-btn" aria-label="Toggle navigation" onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? <X /> : <Menu />}
           </button>
@@ -788,67 +788,7 @@ const filteredProjects =
       </section>
       
       
-   <section className="panel-section" id="experience">
-  <Reveal className="experience-panel">
-    <div className="section-head">
-      <div>
-        <h2>Work Experience</h2>
-        <span className="title-line" />
-      </div>
-
-      <span className="experience-badge">
-        <Sparkles size={16} /> Professional Journey
-      </span>
-    </div>
-
-    <div className="timeline">
-      {experiences.map((experience, index) => {
-        const Icon = experience.icon;
-
-        return (
-          <article
-            className="timeline-row"
-            key={experience.company}
-          >
-            <div className="timeline-date">
-              <span>{experience.period}</span>
-
-              <i
-                className={experience.current ? "current" : ""}
-              />
-            </div>
-
-            <div className="experience-card">
-              <span className="experience-icon">
-                <Icon />
-              </span>
-
-              <div>
-                <span className="experience-index">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-
-                <h3>{experience.role}</h3>
-
-                <h4>{experience.company}</h4>
-
-                
-              </div>
-
-              {experience.current && (
-                <span className="current-label">
-                  <Check size={14} />
-                  Current
-                </span>
-              )}
-            </div>
-          </article>
-        );
-      })}
-    </div>
-  </Reveal>
-</section>
-    
+ 
 
       <section className="panel-section" id="contact">
         <Reveal className="contact-panel">

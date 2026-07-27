@@ -51,7 +51,9 @@ import {
   ShoppingBag,
   UserCog,
   UsersRound,
-  MonitorSmartphone, User
+  MonitorSmartphone, User,
+  Medal,
+  Trophy
 } from "lucide-react";
 
 const skillCategories = [
@@ -111,7 +113,56 @@ const skillCategories = [
     description: "Design and productivity software supporting polished project delivery.",
     items: [["Microsoft Office Suite", FileText], ["Nitro PDF Pro", FileText], ["Adobe XD", FaPaintBrush ], ["Adobe Photoshop", FaPaintBrush],  ["Canva", Palette], ["yWorks" , Workflow]]
   }
- ] as const;
+] as const;
+ 
+const awards = [
+  {
+    id: 1,
+    title: "Employee of the Month",
+    company: "Eva Care Management Consultancy Inc.",
+    date: "September 2023",
+    type: "Employee Recognition",
+    icon: Trophy,
+    accent: "blue"
+  },
+  {
+    id: 2,
+    title: "Employee of the Month",
+    company: "Eva Care Management Consultancy Inc.",
+    date: "September 2022",
+    type: "Employee Recognition",
+    icon: Trophy,
+    accent: "violet"
+  },
+  {
+    id: 3,
+    title:
+      "Certificate of Excellence for Exemplary Technical Skills and Dedication",
+    company: "Rockbird Media",
+    date: "December 2019",
+    type: "Certificate of Excellence",
+    icon: BadgeCheck,
+    accent: "cyan"
+  },
+  {
+    id: 4,
+    title: "Outstanding Accomplishment in Mobile Web Development",
+    company: "Proventa International",
+    date: "February 2019",
+    type: "Technical Achievement",
+    icon: Medal,
+    accent: "amber"
+  },
+  {
+    id: 5,
+    title: "Employee of the Month",
+    company: "Proventa International",
+    date: "February 2019",
+    type: "Employee Recognition",
+    icon: Award,
+    accent: "rose"
+  }
+];
 
 const skillColors: Record<string, string> = {
   PHP: "#777BB4",
@@ -410,7 +461,7 @@ const filteredProjects =
           </a>
           <nav className={menuOpen ? "nav-links open" : "nav-links"}>
             {[
-              ["Home", "#home"], ["About", "#about"], ["Skills", "#skills"], ["Projects", "#projects"], ["Training", "#training"],  ["Contact", "#contact"]
+              ["Home", "#home"], ["About", "#about"], ["Skills", "#skills"], ["Projects", "#projects"], ["Trainings", "#training"], ["Awards", "#awards"],  ["Contact", "#contact"]
  
             ].map(([label, href]) => <a key={label} href={href} onClick={() => setMenuOpen(false)}>{label}</a>)}
           </nav>
@@ -787,7 +838,59 @@ const filteredProjects =
   </Reveal>
       </section>
       
-      
+      <section className="panel-section" id="awards">
+  <Reveal className="awards-panel">
+    <div className="section-head">
+      <div>
+        <h2>Awards & Appreciation</h2>
+        <span className="title-line" />
+      </div>
+
+      <span className="awards-badge">
+        <Sparkles size={16} />
+        Professional Recognition
+      </span>
+    </div>
+
+    <div className="awards-list">
+      {awards.map((award, index) => {
+        const Icon = award.icon;
+
+        return (
+          <article
+            key={award.id}
+            className={`award-row award-${award.accent}`}
+          >
+            <div className="award-icon">
+              <Icon />
+            </div>
+
+            <div className="award-content">
+              <span className="award-index">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+
+              <h3>{award.title}</h3>
+
+              <h4>{award.company}</h4>
+            </div>
+
+            <div className="award-info">
+              <div className="award-date">
+                <CalendarDays size={16} />
+                <span>{award.date}</span>
+              </div>
+
+              <span className="award-type">
+                {award.type}
+              </span>
+            </div>
+          </article>
+        );
+      })}
+    </div>
+  </Reveal>
+</section>
  
 
       <section className="panel-section" id="contact">

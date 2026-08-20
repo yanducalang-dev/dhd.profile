@@ -7,10 +7,10 @@ import {
   SiPhp, SiTypescript, SiJavascript, SiHtml5, SiLaravel, SiYii,
   SiCodeigniter, SiReact, SiNextdotjs, SiVuedotjs, SiNodedotjs, SiWordpress,
   SiJquery, SiBootstrap, SiTailwindcss, SiMysql,
-  SiQuickbooks, SiGit, SiPostman, SiJira,
+  SiQuickbooks, SiGit, SiPostman, SiJira, SiGithub,
   SiVercel, SiSublimetext, SiXampp, SiFilezilla, SiHostinger, SiJson,
 } from "react-icons/si";
-;
+import Image from 'next/image';
 import Link from "next/link";
 import { projects } from "@/data/projects";
 
@@ -424,10 +424,10 @@ export default function Home() {
     
   };
   const scrollToTop = () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
   };
   
   const projectCategories = [
@@ -456,7 +456,7 @@ const filteredProjects =
       <header className="site-header">
         <div className="nav-shell">
           <a className="brand" href="#home" onClick={() => setMenuOpen(false)}>
-            <UserRound className="brand-mark" />
+            <Image src="/profile-pic.jpe" alt="External descriptive text"  width={60} height={60} className="brand-mark" />
             <span><strong>DYANN DUCALANG</strong><small>PROFESSIONAL PROFILE</small></span>
           </a>
           <nav className={menuOpen ? "nav-links open" : "nav-links"}>
@@ -480,6 +480,11 @@ const filteredProjects =
             <div className="hero-actions">
               <a href="#projects" className="primary-btn">View My Work <ArrowRight size={18} /></a>
               <a href="#contact" className="secondary-btn"><Mail size={18} /> Contact Me</a>
+            </div>
+             <div className="social-links">
+              <a href="https://github.com/yanducalang-dev" target="_blank" aria-label="FaGithub"><SiGithub /></a>
+              <a href="www.linkedin.com/in/dyann-ducalang-profile" target="_blank" aria-label="LinkedIn"><FaLinkedin /></a>
+              <a href="mailto:yan.ducalang@gmail.com" aria-label="Email"><Mail /></a>
             </div>
           </Reveal>
           <div className="hero-animation" aria-hidden="true">
@@ -836,9 +841,9 @@ const filteredProjects =
       })}
     </div>
   </Reveal>
-      </section>
+</section>
       
-      <section className="panel-section" id="awards">
+<section className="panel-section" id="awards">
   <Reveal className="awards-panel">
     <div className="section-head">
       <div>
@@ -896,22 +901,29 @@ const filteredProjects =
       <section className="panel-section" id="contact">
         <Reveal className="contact-panel">
           <div className="contact-title"><span><ArrowRight /></span><div><h2>Let&apos;s Work Together</h2><p>Have a project in mind? Let&apos;s build something great together.</p></div></div>
-          <div className="contact-item"><Mail /><span>yan.ducalang@gmail.com</span></div>
-          <div className="contact-item"><Phone /><span>+63 968 213 5135</span></div>
+          <div className="contact-item ">
+             <div className="social-links">
+              <a href="https://github.com/yanducalang-dev" target="_blank" aria-label="FaGithub"><SiGithub /></a>
+              <a href="https.//linkedin.com/in/dyann-ducalang-profile" target="_blank" aria-label="LinkedIn"><FaLinkedin /></a>
+              <a href="mailto:yan.ducalang@gmail.com" aria-label="Email"><Mail /></a>
+              <a href="tel:+63 968 213 5135"><Phone /></a>
+            </div>
+          </div>
+          <div className="contact-item">
+            <a className="download-btn" href="/dhducalang_resume.pdf" download><Download size={15} /> Download CV</a>
+          </div>
           <div className="contact-item"><MapPin /><span>Manila, Philippines</span></div>
         </Reveal>
       </section>
 
       <footer>© 2026 Dyann Ducalang. All rights reserved.</footer>
-      <button
-  type="button"
-  className={`back-to-top ${showBackToTop ? "show" : ""}`}
-  onClick={scrollToTop}
-  aria-label="Back to top"
-  title="Back to top"
->
-  <ArrowUp size={21} />
-</button>
+      <button type="button" className={`back-to-top ${showBackToTop ? "show" : ""}`}
+          onClick={scrollToTop}
+          aria-label="Back to top"
+          title="Back to top"
+        >
+        <ArrowUp size={21} />
+      </button>
     </main>
   );
 }

@@ -315,7 +315,7 @@ html {
     filter: none;
   }
 }
-.training-panel {
+.training-panel, .awards-panel {
   position: relative;
   overflow: hidden;
 
@@ -2552,4 +2552,10 @@ html {
 
     font-size: .85rem;
   }
+}
+
+.contact-item .social-links {
+  gap: 20px;
+  margin-top: 0;
+  display: flex;
 }

@@ -483,7 +483,7 @@ const filteredProjects =
             </div>
              <div className="social-links">
               <a href="https://github.com/yanducalang-dev" target="_blank" aria-label="FaGithub"><SiGithub /></a>
-              <a href="www.linkedin.com/in/dyann-ducalang-profile" target="_blank" aria-label="LinkedIn"><FaLinkedin /></a>
+              <a href="https://linkedin.com/in/dyann-ducalang-profile" target="_blank" aria-label="LinkedIn"><FaLinkedin /></a>
               <a href="mailto:yan.ducalang@gmail.com" aria-label="Email"><Mail /></a>
             </div>
           </Reveal>
@@ -904,7 +904,7 @@ const filteredProjects =
           <div className="contact-item ">
              <div className="social-links">
               <a href="https://github.com/yanducalang-dev" target="_blank" aria-label="FaGithub"><SiGithub /></a>
-              <a href="https.//linkedin.com/in/dyann-ducalang-profile" target="_blank" aria-label="LinkedIn"><FaLinkedin /></a>
+              <a href="https://linkedin.com/in/dyann-ducalang-profile" target="_blank" aria-label="LinkedIn"><FaLinkedin /></a>
               <a href="mailto:yan.ducalang@gmail.com" aria-label="Email"><Mail /></a>
               <a href="tel:+63 968 213 5135"><Phone /></a>
             </div>

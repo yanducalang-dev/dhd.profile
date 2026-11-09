@@ -465,7 +465,7 @@ const filteredProjects =
  
             ].map(([label, href]) => <a key={label} href={href} onClick={() => setMenuOpen(false)}>{label}</a>)}
           </nav>
-          <a className="download-btn" href="/dhducalang_resume.pdf" download><Download size={17} /> Download CV</a>
+          <a className="download-btn" href="/dhd_resume.pdf" download><Download size={17} /> Download CV</a>
           <button className="menu-btn" aria-label="Toggle navigation" onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? <X /> : <Menu />}
           </button>
